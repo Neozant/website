@@ -136,6 +136,18 @@
 				margin-top: 10px;
 			}
 
+
+
+			 .btn:after {
+			    font-family: "Glyphicons Halflings";
+			    content: "\e114";
+			    float: right;
+			    margin-left: 15px;
+			}
+			  /* Icon when the collapsible content is hidden */
+			.btn.collapsed:after {
+			    content: "\e080";
+			}
 			/* MARKETING CONTENT
 			 -------------------------------------------------- */
 
@@ -395,7 +407,8 @@
 						</div>
 					</div>
 				</div> -->
-				<div class="item active">
+				
+				<!-- <div class="item active">
 					<img src="jns_assets/banner/slide_2.png" alt="">
 					<div class="container">
 						<div class="carousel-caption">
@@ -407,7 +420,7 @@
 							
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- <div class="item">
 					<img src="jns_assets/banner/slide_3.png" alt="">
 					<div class="container">
@@ -437,7 +450,6 @@
  
 				<div type="button" class="" data-toggle="collapse" data-target="#demo_1">
 				   <h4 style="border-style: outset;"> 
-				   
 				   Orcale Based Solutions:NEOZANT provides a complete Oracle support solution for customers
 					<img src="jns_assets/thumbnails/ORACLE_ERP.png" /> </h4>
 				</div>
@@ -473,7 +485,7 @@
 				</div>
 				
 				
-				<div class="row-fluid">
+				<!-- <div class="row-fluid">
  
 				<div type="button" class="" data-toggle="collapse" data-target="#demo_2">
 				   <h4 style="border-style: outset;"> DevOps solutions:Automated Task Scheduler and Tracker 
@@ -493,10 +505,10 @@
 				  </div>
 				  
 				  
-				</div>
+				</div> -->
 				
 				
-				<div class="row-fluid">
+				<!-- <div class="row-fluid">
  
 				<div type="button" class="" data-toggle="collapse" data-target="#demo_3">
 				   <h4 style="border-style: outset;"> Retail based Inventory and Sales Solution
@@ -584,7 +596,7 @@
 					</ul>
 					</div>
 				  </div>
-				</div>
+				</div> -->
 
 			</div>
 
@@ -632,12 +644,12 @@
 			
 				<!-- img class="featurette-image pull-left" src="jns_assets/proj12/oracle_suport.png"-->
 				
-				<h2 class="featurette-heading">Solutions and support for companies using Oracle EBS provided by NEOZANT<span class="muted"><br></h2>
+				<h2 class="featurette-heading">NEOZANT provides a complete solutions and support for companies using Oracle EBS<span class="muted"><br></h2>
 				<p class="lead">
 				
 				<div class="row-fluid">
  
-				<div type="button" class="" data-toggle="collapse" data-target="#oracle_implementation">
+				<div type="button" class="" data-toggle="collapse" data-parent="#accordion" data-target="#oracle_implementation">
 				   <h4 style="border-style: outset;"> Implementation
 					<!-- <img src="jns_assets/proj12/DesignAndImplementation_small.png" /> --> </h4>
 				</div>
@@ -661,7 +673,7 @@
 				
 				<div class="row-fluid">
  
-				<div type="button" class="" data-toggle="collapse" data-target="#oracle_support">
+				<div type="button" class="" data-toggle="collapse" data-parent="#accordion" data-target="#oracle_support">
 				   <h4 style="border-style: outset;"> Support 
 					<!-- <img src="jns_assets/proj12/Customer_support_small.png" /> --> </h4>
 				</div>
@@ -698,7 +710,7 @@
 					
 				<div class="row-fluid">
  
-				<div type="button" class="" data-toggle="collapse" data-target="#oracle_advisory">
+				<div type="button" class="" data-toggle="collapse" data-parent="#accordion" data-target="#oracle_advisory">
 				   <h4 style="border-style: outset;"> Enterprise Advisory Services        
 					<!-- <img src="jns_assets/proj12/advisory_services_small.png" /> --> </h4>
 				</div>
@@ -733,7 +745,7 @@
 				
 				<div class="row-fluid">
  
-				<div type="button" class="" data-toggle="collapse" data-target="#business_intelligence">
+				<div type="button" class="" data-toggle="collapse" data-parent="#accordion" data-target="#business_intelligence">
 				   <h4 style="border-style: outset;" > Business Intelligence Services 
 					<!-- <img src="jns_assets/proj12/business_intelligence_small.png" />  --></h4>
 				</div>
@@ -942,12 +954,12 @@
 				<div class="form-signin">
 					<h2 class="form-signin-heading">Reach Out To Us</h2>
 					<p><h4>
-						 Drop an email on  <a>sales@neozant.com</a> <br> And we would get back to you.
+						 <a>sales@neozant.com</a> <br> 
 						 </h4>
 					</p>
 					OR
 					<p><h4>
-						Call Us on <br><a>+91-9604574467</a> <br> <a>+91-9765896417</a>  <br> 
+						Tel: <br><a>+91-9604574467</a> <br> <a>+91-9765896417</a>  <br> 
 						 </h4>
 					</p>
 					<!--
@@ -970,8 +982,9 @@
 					
 				</p>
 				<p>
-					©NeoZant-Technology 
-				</p>
+					©NeoZant-Technology
+					</p>
+				
 			</footer>
 
 		</div><!-- /.container -->
@@ -1028,7 +1041,7 @@
 					})
 				})
 				
-				
+				$(".collapse").collapse('show');	
 				
 			}(window.jQuery)
 		</script>

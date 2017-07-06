@@ -270,7 +270,10 @@
 					height: 300px;
 				}
 				
-				
+				.carousel-caption-erp1 {
+					width: 65%;
+					padding: 0 70px;
+				}
 				
 				.carousel-caption-erp {
 					width: 65%;
@@ -330,6 +333,42 @@
 				font-family: sans-serif;
 				margin: 0
 			}
+
+			.NEWHACKsquare1 {
+			      height: 80px;
+			    width: 271px;
+			}
+
+
+			.NEWHACKsquare {
+			    width: 8%;
+			}
+
+			img1 {
+			    max-width: 83%;
+			    max-height: 100%
+			}
+
+			.liHACK{
+				font-weight: bold;
+			    color: antiquewhite;
+			    font-size: 1.3em;
+			}
+
+
+			#our_moto {
+				padding-top :8%;
+			}
+			
+			.fixedPosition{
+				position: fixed;
+			}
+
+			.mainWebSiteName{
+				    font-size: 2.5em;
+    				font-weight: bold;
+			}
+
 		</style>
 	</head>
 
@@ -337,11 +376,11 @@
 
 		<!-- NAVBAR
 		================================================== -->
-		<div id ="home" class="navbar-wrapper">
+		<div id ="home" class="navbar-wrapper fixedPosition">
 			<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
 			<div class="container">
 
-				<div class="navbar navbar-inverse">
+				<div class="navbar">
 					<div class="navbar-inner">
 						<!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
 						<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
@@ -349,21 +388,21 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="brand" href="#"> <img src="jns_assets/logo.png" /> </a>
+						<a class="brand NEWHACKsquare" href="#home"> <img src="jns_assets/logo/ONLY_NEO_LOGO.png"  style="border: none; width: 100%;" /> </a>
 						<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 						<div class="nav-collapse collapse" style="height: 0px;">
-							<h2 style="color:white;">NeoZant Technologies</h2>
-							<ul class="nav">
-								<li class="active">
-									<a href="#">Home</a>
+							 <div style="color:black;margin-top: 3%;"> <span class="mainWebSiteName">NeoZant Technologies</span><br> <span> Entify Ideas</span></div> 
+							<ul class="nav pull-right">
+								<li class="active liHACK menu-btn-nz">
+									<a href="#our_moto">Home</a>
 								</li>
-								<li>
+								<li class=" liHACK menu-btn-nz">
 									<a href="#work">Work</a>
 								</li>
-								<li>
+								<li class=" liHACK menu-btn-nz">
 									<a href="#why_neo">Why NeoZant?</a>
 								</li>
-								<li>
+								<li class=" liHACK menu-btn-nz">
 									<a href="#contact">Contact Us</a>
 								</li>
 								<!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
@@ -380,12 +419,12 @@
 		<!-- Carousel
 		================================================== -->
 		<div id="our_moto" class="carousel slide">
-			<div class="carousel-inner">
+			<!-- <div class="carousel-inner">-->
 			
 			    <div class="item erp">
-					<img src="jns_assets/banner/slide_erp.png" alt="">
+					<img src="jns_assets/banner/slide_erp.png" style="width: 100%;height: 80%;padding-top: 7%;">
 					<div class="container">
-						<div class="carousel-caption-erp">
+						<div class="carousel-caption-erp carousel-caption-erp1">
 							<h1>We help transform your Oracle E-Business Suite.</h1>
 							<p class="lead">
 								NEOZANTprovides full-service Oracle Consulting with expertise in delivering Business and Analytics solutions.
@@ -432,10 +471,13 @@
 							
 						</div>
 					</div>
-				</div> -->
-			</div>
-			<a class="left carousel-control" href="#our_moto" data-slide="prev" style="color: rgb(82, 71, 71);">‹</a>
-			<a class="right carousel-control" href="#our_moto" data-slide="next" style="color: rgb(82, 71, 71);">›</a>
+				</div> 
+
+</div>
+				-->
+			
+			<!--<a class="left carousel-control" href="#our_moto" data-slide="prev" style="color: rgb(82, 71, 71);">‹</a>
+			<a class="right carousel-control" href="#our_moto" data-slide="next" style="color: rgb(82, 71, 71);">›</a> -->
 		</div><!-- /.carousel -->
 
 		<!-- Marketing messaging and featurettes
@@ -444,7 +486,7 @@
 
 		<div class="container marketing" >
 			
-			<div id="work" class="featurette" style="padding-top:60px!important">
+			<div id="work" class="featurette" >
 			
 				<div class="row-fluid" >
  
@@ -1003,14 +1045,23 @@
 			! function($) {
 				$(function() {
 					// carousel demo
-					$('#our_moto').carousel()
+					//$('#our_moto').carousel()
+
+
+					$('.menu-btn-nz').on('click',function(evt){
+						$('.menu-btn-nz').removeClass('active');
+						$(evt.target.parentElement).addClass('active')
+						
+					});
+
+
 					$('a[href^="#"]').on('click', function(e) {
 						
 						e.preventDefault();
 						var target = this.hash, $target = $(target);
 						$('html, body').stop().animate({
 							'scrollTop' : $target.offset().top
-						}, 900, 'swing', function() {
+						}, 500, 'swing', function() {
 							window.location.hash = target;
 						});
 					});
